@@ -1,0 +1,43 @@
+/**
+* @company Collabo Banding Agency
+* @developer Joe Watson SBF
+*/
+
+
+
+// SECTION PRODUCT INFO
+
+// Change display block to flex and re-order each item
+#shopify-section-product-template-1 .product-single__info-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    // title and price
+    .product-single__meta.small--text-center {
+        order: -1;
+    }
+
+    div#nav-tab-info {
+        order: 2;
+    }
+
+    //btn actions form
+    form#AddToCartForm-product-template-1 {
+        order: 3;
+    }
+
+    // TEXT - 100% NO RISK MONEY BACK GUARANTEE
+    .fake-view.py-4 {
+        order: 4;
+    }
+
+}
+
+
+
+#shopify-section-product-template-1 .product-single__info-wrapper div#nav-tab-info {
+    .nav {
+        visibility: hidden;
+        margin-top: -5rem;
+    }
+}
