@@ -7,80 +7,115 @@
 // COLABO BRANDING AGENCY
 
 
-  // SINGLE PRODUCT PAGE 
+// SINGLE PRODUCT PAGE 
 
 
-  // SECTION PRODUCT DETAILS
+// SECTION PRODUCT DETAILS
 
-  #shopify-section-product-template-1 .product-single__info-wrapper {
-    display: flex;
-    flex-direction: column;
+/* 
 
-  // title and price
-  .product-single__meta.small--text-center {
-    order: -1;
-  }
+INSTRUCTIONS
 
-  div#nav-tab-info{
-    order: 2;
-  }
+1°)
 
-  //btn actions form
-  form#AddToCartForm-product-template-1 {
-    order: 3;
-  }
+Go ahead in product-template-1, in line 361 and pass those classes [ collabo-single-product-logo flex-col ]
+change the row property to col save it
 
-  // TEXT - NO RISK...
-  .fake-view.py-4{
-    order: 4;
-  }
-  
+Element :
+	Before   <div class="row text-left pt-2">
+	After    <div class="col text-left collabo-single-product-logo flex-col pt-2"> 
+
+Change the width of the Logo Image in line 378 : w-100  to  w-50
+
+2°)
+
+Go ahead now in theme.scss.liquid, 
+
+*/
+
+
+
+
+
+
+
+
+
+#shopify-section-product-template-1 .product-single__info-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	// title and price
+	.product-single__meta.small--text-center {
+		order: -1;
+	}
+
+	div#nav-tab-info {
+		order: 2;
+	}
+
+	//btn actions form
+	form#AddToCartForm-product-template-1 {
+		order: 3;
+	}
+
+	// TEXT - NO RISK...
+	.fake-view.py-4 {
+		order: 4;
+	}
+
+	// LOGO
+	.collabo-single-product-logo {
+		order: 5;
+	}
+
 }
 
 #shopify-section-product-template-1 .product-single__info-wrapper div#nav-tab-info {
-    .nav{
-      /*visibility: hidden;*/
-      margin-top: -2rem;
-    }
+	.nav {
+		margin-top: -2rem;
+	}
 
-  .tab-content {
-    padding: 1rem 0 0 0;
-  }
+	.nav-tabs {
+		justify-content: start !important;
+	}
+
+	.tab-content {
+		padding: 1rem 0 0 0;
+	}
 }
 
-  
+
 // FAKE VIEW
-#ProductSection-product-template-1 > div.row.product-single > div.col-12.col-md-6.order-1 > div > div.fake-view.py-4{
-  font-weight: 800;
-  padding: 1rem 0 !important;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-  .js-fake-view{
-    display: none !important;
-  }
+#ProductSection-product-template-1>div.row.product-single>div.col-12.col-md-6.order-1>div>div.fake-view.py-4 {
+	font-weight: 800;
+	padding: 1rem 0 !important;
+	margin-top: 1rem;
+	border-radius: 0.5rem;
+
+	.js-fake-view {
+		display: none !important;
+	}
 }
 
 // HIDE ADD TO CART BTN
 
-#AddToCartForm-product-template-1 > .product-form__quantity-submit.pt-4 .product-form__buynow{
-  display: none;
+#AddToCartForm-product-template-1>.product-form__quantity-submit.pt-4 .product-form__buynow {
+	display: none;
 }
 
 
 @media (min-width:990px) {
-  .slideshow__title{
-    font-size: var(--g-h1-font-size) !important;
-  }
+	.slideshow__title {
+		font-size: var(--g-h1-font-size) !important;
+	}
 }
 
 
 #qv-product-images {
 
-  .slick-track, .slick-slide.slick-current.slick-active{
-    width: auto !important;
-  }
+	.slick-track,
+	.slick-slide.slick-current.slick-active {
+		width: auto !important;
+	}
 }
-
-
-
-
