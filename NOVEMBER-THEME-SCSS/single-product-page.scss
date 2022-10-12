@@ -122,19 +122,3 @@ Go ahead now in theme.scss.liquid and paste the scss code below
 
 
 
-
-
-/*
-
-3°) GO in theme.js in line 3539 to 3545 change slick to this:
-
- $(quickviewThumb).slick({
-        rtl:theme.rtl,
-        dots: true,
-        arrows: true,
-        respondTo: 'min',
-        useTransform: true
-      }).css('opacity', '1');
-
-	  
-*/
