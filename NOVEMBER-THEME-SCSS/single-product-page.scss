@@ -29,17 +29,9 @@ Change the width of the Logo Image in line 378 : w-100  to  w-50
 
 2°)
 
-Go ahead now in theme.scss.liquid, 
+Go ahead now in theme.scss.liquid and paste the scss code below
 
 */
-
-
-
-
-
-
-
-
 
 #shopify-section-product-template-1 .product-single__info-wrapper {
 	display: flex;
@@ -112,6 +104,8 @@ Go ahead now in theme.scss.liquid,
 }
 
 
+
+/*
 #qv-product-images {
 
 	.slick-track,
@@ -119,3 +113,28 @@ Go ahead now in theme.scss.liquid,
 		width: auto !important;
 	}
 }
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+
+3°) GO in theme.js in line 3539 to 3545 change slick to this:
+
+ $(quickviewThumb).slick({
+        rtl:theme.rtl,
+        dots: true,
+        arrows: true,
+        respondTo: 'min',
+        useTransform: true
+      }).css('opacity', '1');
+
+	  
+*/
