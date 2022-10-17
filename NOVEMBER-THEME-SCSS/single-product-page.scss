@@ -62,8 +62,10 @@ Go ahead now in theme.scss.liquid and paste the scss code below
 	.collabo-single-product-logo {
 		order: 5;
 
-		.safe-checkout-detail.col {
-			justify-content: center;
+		@media (max-width:600px) {
+			.safe-checkout-detail.col {
+				justify-content: center;
+			}
 		}
 
 	}
@@ -94,7 +96,7 @@ Go ahead now in theme.scss.liquid and paste the scss code below
 	border-radius: 0.5rem;
 	margin-top: -2.5rem;
 
-	@media (max-width:990px) {
+	@media (max-width:600px) {
 		text-align: center;
 	}
 
@@ -110,7 +112,7 @@ Go ahead now in theme.scss.liquid and paste the scss code below
 }
 
 
-@media (min-width:990px) {
+@media (min-width:600px) {
 	.slideshow__title {
 		font-size: var(--g-h1-font-size) !important;
 	}
@@ -123,12 +125,12 @@ Go ahead now in theme.scss.liquid and paste the scss code below
 
 
 #productrelated {
-	margin-top: -50px !important;
+	margin-top: -30px !important;
 	margin-bottom: 1rem !important;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 	#productrelated {
-		margin-top: -70px !important;
+		margin-top: -50px !important;
 	}
 }
