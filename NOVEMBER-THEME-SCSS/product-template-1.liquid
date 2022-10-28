@@ -1,0 +1,36 @@
+/**
+* @company Collabo Banding Agency
+* @developer Joe Watson SBF
+*/
+
+
+
+
+// In line 361 to 381, change the code to this following:
+
+
+// COLABO BRANDING AGENCY
+
+<div class="col text-left collabo-single-product-logo flex-col pt-2">
+    <div class="product-single__information col text-uppercase">
+      {% if section.settings.product_vendor_enable %}
+      <p class="product-single__vendor"><small class="text-body">{{'products.product.vendor' | t }}: </small><small>{{ product.vendor }}</small></p>
+      {% endif %}
+      {% if section.settings.product_type_enable %}
+      <p class="product-single__type"><small class="text-body">{{'products.product.type' | t }}: </small><small>{{ product.type }}</small></p>
+      {% endif %}
+      {% if section.settings.variant_sku_enable %}
+      <p class="product-single__sku "><small class="text-body">{{'products.product.sku' | t }}: </small><small class="js-variant-sku">{{ current_variant.sku | default:'null' }}</small></p>
+      {% endif %}
+      {% if section.settings.variant_available_enable %}
+      <p class="product-single__availability "><small class="text-body">{{'products.product.available' | t }}: </small><small>{% if current_variant.available %}{{ 'products.product.available' | t }}{% else %}{{'products.product.sold_out' | t }}{% endif %}</small></p>
+      {% endif %}
+    </div>
+    {% if settings.safe_checkout_detail != blank %}
+    <div class="safe-checkout-detail col">
+      <img class="lazyload img-fluid w-50" data-src="{{ settings.safe_checkout_detail | img_url: '600x' }}"/>
+    </div>
+    {% endif %}
+  </div>
+
+  // END COLABO BRANDING AGENCY
